@@ -1,0 +1,38 @@
+[
+  {
+    "id": "id-1",
+    "url": "https://cdn.pixabay.com/photo/2018/02/16/13/53/sand-3157732_960_720.jpg",
+    "title": "Мальдіви",
+    "price": 100
+  },
+  {
+    "id": "id-2",
+    "url": "https://st3.depositphotos.com/1422604/18071/i/600/depositphotos_180719346-stock-photo-view-of-the-black-sea.jpg",
+    "title": "Бермуди",
+    "price": 150
+  },
+  {
+    "id": "id-3",
+    "url": "https://www.telegraph.co.uk/content/dam/Travel/leadAssets/30/91/PuertoRico_3091721a-xlarge.jpg",
+    "title": "Порто-Ріко",
+    "price": 200
+  },
+  {
+    "id": "id-4",
+    "url": "https://wallpapercave.com/wp/wp7596816.jpg",
+    "title": "Мехіко",
+    "price": 300
+  },
+  {
+    "id": "id-5",
+    "url": "https://www.poihaluznamu.com/poyihaly_z_namy/images/articles/dominikana_51.jpg",
+    "title": "Домінікана",
+    "price": 400
+  },
+  {
+    "id": "id-6",
+    "url": "https://st.depositphotos.com/44741696/57171/i/600/depositphotos_571718682-stock-photo-wallilabou-bay-saint-vincent-and.jpg",
+    "title": "Каріби",
+    "price": 500
+  }
+]

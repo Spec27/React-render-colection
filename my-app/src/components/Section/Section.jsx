@@ -10,7 +10,7 @@ function Section({title,children}) {
 
 Section.propTypes ={
     title: PropTypes.string,
-    childrin: PropTypes.node,
+    children: PropTypes.node,
 }
 
 export default Section;

@@ -1,0 +1,27 @@
+.Product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 0, 0.185);
+   
+}
+
+.ItemContainer{
+    margin: 5px;
+    list-style: none;
+    background-color: rgba(0, 255, 255, 0.527);
+    border-radius: 10px;
+   padding-bottom: 20px;
+}
+.CardImg{
+    width: 460px;
+    height: 320px;
+}
+.Btn{
+    width: 110px;
+    background-color: rgba(255, 255, 0, 0.719);
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+}
