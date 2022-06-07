@@ -1,0 +1,1 @@
+export { Panting } from './Panting';
