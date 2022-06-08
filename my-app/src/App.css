@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.box.teal{
+  background-color: rgb(5, 118, 109);
+}
+.box.big{
+  width: 200px;
+  height: 200px;
+}

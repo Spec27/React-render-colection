@@ -1,0 +1,20 @@
+.Alert{
+    line-height: 1.5;
+    padding: 10px 20px;
+    background-color:rgb(149, 147, 147);
+    color: #ffffff;
+}
+
+.error{
+    composes:Alert;
+    background-color: red;
+}
+.warning{
+    composes:Alert;
+    background-color: yellow;
+}
+
+.success{
+    composes:Alert;
+background-color: green;
+}

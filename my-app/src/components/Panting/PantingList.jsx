@@ -1,12 +1,13 @@
 import Panting from "./Panting";
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
+import s from "./Panting.module.css"
 
 
 function PantingList({ items }) {
     return (
-        <ul >
+        <ul className={s.Panting} >
             {items.map(item => 
-                <li key={item.id}>
+                <li className={s.Card} key={item.id}>
                     <Panting
                         imgUrl={item.url}
                         title={item.title}

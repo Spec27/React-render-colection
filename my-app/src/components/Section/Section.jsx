@@ -1,7 +1,7 @@
 import s from "./Section.module.css";
 import PropTypes from "prop-types"
 
-function Section({title,children}) {
+function Section({title, children}) {
     return <div className={s.Section}>
         {title && <h2>{title}</h2>} 
         {children}
