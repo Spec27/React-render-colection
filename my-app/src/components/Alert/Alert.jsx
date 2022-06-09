@@ -1,9 +1,9 @@
 import s from "./Alert.module.css"
 import PropTypes from "prop-types"
 
-function Alert({text,type = ''}) {
+function Alert({text,type}) {
     return (
-        <p role="alert" className={`${s.Alert} ${s[type]}`}>{text}</p>
+        <p role="alert" className={s[type]}>{text}</p>
     )
 }
 

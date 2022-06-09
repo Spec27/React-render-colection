@@ -1,1 +1,1 @@
-export { Panting } from './Panting';
+export { default } from './Panting';
