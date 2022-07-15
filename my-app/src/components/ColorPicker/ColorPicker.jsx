@@ -1,49 +1,39 @@
-import React, { Component } from "react";
+import { useState } from "react";
 import classNames from "classnames";
 import"./ColorPicker.css";
 
-class ColorPicker extends Component{
-    state = {
-        activeOptionIdx:0,
-    }
 
-    setActiveIndex = (index) => {
-        this.setState({activeOptionIdx:index})
-    }
+export default function ColorPicker({ options }) {
+    const [activeOptionIdx, setActiveOptionIdx] = useState(0);
 
-    makeOptionClassName = (index) => {
-        return classNames('Option',{'Option--active':index === this.state.activeOptionIdx})
+    const setActiveIndex = index => {
+        setActiveOptionIdx(index);
+    };
+
+   const makeOptionClassName = (index) => {
+        return classNames('Option',{'Option--active':index === activeOptionIdx})
       
     }
 
+    const { label } = options[activeOptionIdx];
 
-    render() {
-        const { options } = this.props;
-        const { activeOptionIdx } = this.state;
-        const activeOption = options[activeOptionIdx];
-            
-        const { label } = activeOption;
-       
-        return (
-            <div className='ColorPicker'>
+ 
+    return (
+        <div className='ColorPicker'>
                 <h2 className='Title'>Color-Picker</h2>
-                <p>Вибраний вами колір: {label }</p>
+                <p>Вибраний вами колір: {label}</p>
             <div>
-                    {this.props.options.map(({ label, color }, index) => ( 
+                    {options.map(({ label, color }, index) => ( 
                         <button     
                         key={label}
-                        className={this.makeOptionClassName(index)}
+                        className={makeOptionClassName(index)}
                         style={{ backgroundColor: color }}
-                        onClick={()=>this.setActiveIndex(index)}
+                        onClick={()=>setActiveIndex(index)}
                         >
                     </button>
                     )
                     )}
             </div>
         </div> 
-        )
-    }
+    )
 }
-
-
-export default ColorPicker;   

@@ -1,37 +1,37 @@
-import React, { Component } from 'react';
-import Contols from './Contlos';
-import s from './Counter.module.css';
+import { useState,useEffect} from "react";
+/* import Controls from './Controls'; */
+import s from "./Counter.module.css";
 
-class Counter extends Component {
-  static defaultProps = {
-    initialValue: 0,
+export default function Counter() {
+const [initialValue, setInitialValue] = useState(0)
+
+    
+const handleIncrement = () => {
+    setInitialValue(prevState => prevState+ 1 );
+    };
+    
+ const handleDecriment = () => {
+        setInitialValue(prevState =>prevState -1);
+       
   };
+  
 
-  state = {
-    value: this.props.initialValue,
-  };
-
-  handleIncrement = () => {
-    this.setState(prevState => ({ value: prevState.value + 1 }));
-    console.log('click counter +1');
-  };
-
-  handleDecriment = () => {
-    this.setState(prevState => ({ value: prevState.value - 1 }));
-    console.log('click counter -');
-  };
-
-  render() {
+  useEffect(() => {
+    
+},[initialValue])
+  
+  
     return (
-      <div className={s.Counter}>
-        <span className={s.CounterValue}>{this.state.value}</span>
-        <Contols
-          onIncrement={this.handleIncrement}
-          onDecrement={this.handleDecriment}
-        />
+      <>
+        <div className={s.Counter}>
+        <span className={s.CounterValue}>{initialValue}</span>
       </div>
-    );
-  }
+    <button type="button" className={s.Btn} onClick={handleIncrement}>
+      Збільшити +1
+            </button>
+            <button  type="button" className={s.Btn} onClick={handleDecriment}>
+      Зменшити -1
+    </button>
+        </>
+    )
 }
-
-export default Counter;
